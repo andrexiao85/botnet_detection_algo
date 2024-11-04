@@ -15,8 +15,8 @@ Research based on:
 
 ## Method
 
-Compute periodogram which identifies the peak of the frequency domain of
-the discrete time series traffic signal. After peak is located, Walker’s
+We compute a periodogram which identifies the peak of the frequency domain of
+the discrete time series traffic signal. After the peak is located, Walker’s
 large sample test is applied to confirm that the peak is significant
 enough compared to the rest of the periodogram’s ordinates. We compute
 the peak and confirm with Walker’s test for different discrete time
@@ -37,7 +37,7 @@ traffic log looks like this:
 
 - No. of events = 9 Million
 
-In order to compute the periodogram there is a need to reduce events as
+In order to compute the periodogram, there is a need to reduce events as
 the computation is costly – it costs about 2 secs to compute the
 periodogram of one edge. We developed two segmentation techniques which
 work well in this regard.
@@ -71,7 +71,7 @@ Combining the two segmentation strategies, leads to a set of 107 edges
 that we need to compute their periodogram. Computing periodogram for 107
 edges takes 150 secs on a laptop.
 
-**Compute periodogram**
+**Computing the Periodogram**
 
 We compute the maximum spectral density (periodogram) at different
 discrete time intervals (1s – 15s). This is mainly because different
@@ -86,7 +86,7 @@ We selected edges that had maximum periodogram readings higher than 500.
 This number can be adjusted accordingly depending on how many edges one
 can handle.
 
-We apply walker’s large test to the periodogram’s maximum ordinate to
+We apply Walker’s large test to the periodogram’s maximum ordinate to
 determine if it is periodic or not.
 
 ## Results
@@ -94,12 +94,14 @@ determine if it is periodic or not.
 These are end points that have maximum periodogram value \> 500 (most
 likely to be periodic) in one day.
 
+<p align="center">
 <img src="./media/image1.png"
 style="width:5.43056in;height:4.01389in" />
+</p>
 
 The figures below show the distribution of traffic for each end point:
 
-<u>C1340 – C787</u>
+<b>C1340 – C787</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -107,10 +109,12 @@ The figures below show the distribution of traffic for each end point:
 | 15            | 9          |
 | 17            | 8          |
 
+<p align="center">
 ﻿<img src="./media/image2.png"
 style="width:3.68145in;height:2.54425in" />
+</p>
 
-<u>C1015 – C15487</u>
+<b>C1015 – C15487</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -118,10 +122,12 @@ style="width:3.68145in;height:2.54425in" />
 | 31            | 42         |
 | 29            | 34         |
 
+<p align="center">
 <img src="./media/image3.png"
-style="width:3.46392in;height:2.38828in" />
+style="wwidth:3.68145in;height:2.54425in" />
+</p>
 
-<u>C3871 – C23147</u>
+<b>C3871 – C23147</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -129,10 +135,11 @@ style="width:3.46392in;height:2.38828in" />
 | 25            | 203        |
 | 27            | 26         |
 
-<img src="./media/image4.png" style="width:2.8in;height:1.93194in" /><u>  
-</u>
+<p align="center">
+<img src="./media/image4.png" style="width:3.68145in;height:2.54425in" />
+</p>
 
-<u>C1015 – C12562</u>
+<b>C1015 – C12562</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -165,10 +172,12 @@ style="width:3.46392in;height:2.38828in" />
 | 7             | 13         |
 | 15            | 12         |
 
+<p align="center">
 <img src="./media/image5.png"
-style="width:3.34345in;height:2.21742in" />
+style="width:3.68145in;height:2.54425in" />
+</p>
 
-<u>C17693 – C5074</u>
+<b>C17693 – C5074</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -183,10 +192,12 @@ style="width:3.34345in;height:2.21742in" />
 | 47            | 1          |
 | 54            | 1          |
 
+<p align="center">
 <img src="./media/image6.png"
-style="width:2.6054in;height:1.76429in" />
+style="width:3.68145in;height:2.54425in" />
+</p>
 
-<u>C1015 – C11114</u>
+<b>C1015 – C11114</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -200,13 +211,12 @@ style="width:2.6054in;height:1.76429in" />
 | 39            | 1          |
 | 40            | 1          |
 
+<p align="center">
 <img src="./media/image7.png"
-style="width:2.53615in;height:1.72143in" />
+style="width:3.68145in;height:2.54425in" />
+</p>
 
-<u>C3173 – C1554</u>
-
-<img src="./media/image8.png"
-style="width:2.47287in;height:1.65714in" />
+<b>C3173 – C1554</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -231,8 +241,13 @@ style="width:2.47287in;height:1.65714in" />
 | 8             | 30         |
 | 16            | 30         |
 
-<u>C1015 – C14163  
-</u>
+<p align="center">
+<img src="./media/image8.png"
+style="width:3.68145in;height:2.54425in" />
+</p>
+
+<b>C1015 – C14163  
+</b>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -245,39 +260,39 @@ style="width:2.47287in;height:1.65714in" />
 | 41            | 17         |
 | 34            | 2          |
 
+<p align="center">
 <img src="./media/image9.png"
-style="width:3.03104in;height:2.10714in" /><u>  
-</u>
+style="width:3.68145in;height:2.54425in" />
+</p>
 
-The tables below the top daily edges based on maximum periodogram values
-and exhibit most probable behavior of botnets.
+The tables below show the top daily edges based on maximum periodogram values that exhibit the most probable behavior of botnets.
 
-<u>Day 2</u>
+<b>Day 2</b>
 
 <img src="./media/image10.png"
 style="width:2.85531in;height:0.94203in" />
 
-<u>Day 3</u>
+<b>Day 3</b>
 
 <img src="./media/image11.png"
 style="width:2.98187in;height:1.47187in" />
 
-<u>Day 4</u>
+<b>Day 4</b>
 
 <img src="./media/image12.png"
 style="width:3.09709in;height:1.52874in" />
 
-<u>Day 5</u>
+<b>Day 5</b>
 
 <img src="./media/image13.png"
 style="width:2.89677in;height:2.14109in" />
 
-<u>Day 6</u>
+<b>Day 6</b>
 
 <img src="./media/image14.png"
 style="width:2.90882in;height:1.43581in" />
 
-<u>Day 7</u>
+<b>Day 7</b>
 
 <img src="./media/image15.png"
 style="width:3.20134in;height:1.1872in" />
@@ -286,5 +301,5 @@ style="width:3.20134in;height:1.1872in" />
 
 The results show that as the maximum periodogram reduces, the periodic
 behavior on edge also reduces accordingly. Among the top periodic edges,
-we are able to identify an edge which is a subject of lots of redteam
+we are able to identify an edge which is a subject of many redteam
 events which is a possible candidate of botnet behavior.
