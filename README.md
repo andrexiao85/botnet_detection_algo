@@ -1,7 +1,7 @@
 # Botnet Detection Algorithm
 A botnet detection algorithm developed using Fourier analysis and data from the Los Alamos National Laboratory for cybersecurity work.
 
-> **Abstract**
+## Abstract
 
 The objective of this algorithm is to identify highly periodic edges
 from network logs at scale which are likely to be part of the beginning
@@ -11,7 +11,9 @@ needed for the bot to: - 1) update their data, 2) receive commands, 3)
 send keep-alive messages. The behavior is observed when looking at the
 transport port of the of the bot for its C2 communication.
 
-**Method**
+Research based on: 
+
+## Method
 
 Compute periodogram which identifies the peak of the frequency domain of
 the discrete time series traffic signal. After peak is located, Walker’s
@@ -40,7 +42,7 @@ the computation is costly – it costs about 2 secs to compute the
 periodogram of one edge. We developed two segmentation techniques which
 work well in this regard.
 
-Segmentation 1: identify unidirectional edges
+**Segmentation 1:** identify unidirectional edges
 
 - Firewalls will only allow traffic going out and not coming in
   especially if its dubious traffic that might be coming from a
@@ -49,7 +51,7 @@ Segmentation 1: identify unidirectional edges
 - Removing bidirectional edges reduces number of edges to 10,902 and
   number of events to 1.5 Million
 
-Segmentation 2: remove byte/packet communications with low frequency
+**Segmentation 2:** remove byte/packet communications with low frequency
 
 - Low frequency of similar byte/packet connections means there are very
   few ‘botnet-like’ connections because it points towards low
@@ -87,7 +89,7 @@ can handle.
 We apply walker’s large test to the periodogram’s maximum ordinate to
 determine if it is periodic or not.
 
-**<u>Results</u>**
+## Results
 
 These are end points that have maximum periodogram value \> 500 (most
 likely to be periodic) in one day.
@@ -95,7 +97,7 @@ likely to be periodic) in one day.
 <img src="./media/image1.png"
 style="width:5.43056in;height:4.01389in" />
 
-The figures below show the distribution of traffic for each end point
+The figures below show the distribution of traffic for each end point:
 
 <u>C1340 – C787</u>
 
@@ -105,7 +107,7 @@ The figures below show the distribution of traffic for each end point
 | 15            | 9          |
 | 17            | 8          |
 
-﻿<img src="./media/image2.tiff"
+﻿<img src="./media/image2.png"
 style="width:3.68145in;height:2.54425in" />
 
 <u>C1015 – C15487</u>
@@ -116,7 +118,7 @@ style="width:3.68145in;height:2.54425in" />
 | 31            | 42         |
 | 29            | 34         |
 
-<img src="./media/image3.tiff"
+<img src="./media/image3.png"
 style="width:3.46392in;height:2.38828in" />
 
 <u>C3871 – C23147</u>
@@ -127,7 +129,7 @@ style="width:3.46392in;height:2.38828in" />
 | 25            | 203        |
 | 27            | 26         |
 
-<img src="./media/image4.tiff" style="width:2.8in;height:1.93194in" /><u>  
+<img src="./media/image4.png" style="width:2.8in;height:1.93194in" /><u>  
 </u>
 
 <u>C1015 – C12562</u>
@@ -163,7 +165,7 @@ style="width:3.46392in;height:2.38828in" />
 | 7             | 13         |
 | 15            | 12         |
 
-<img src="./media/image5.tiff"
+<img src="./media/image5.png"
 style="width:3.34345in;height:2.21742in" />
 
 <u>C17693 – C5074</u>
@@ -181,7 +183,7 @@ style="width:3.34345in;height:2.21742in" />
 | 47            | 1          |
 | 54            | 1          |
 
-<img src="./media/image6.tiff"
+<img src="./media/image6.png"
 style="width:2.6054in;height:1.76429in" />
 
 <u>C1015 – C11114</u>
@@ -198,12 +200,12 @@ style="width:2.6054in;height:1.76429in" />
 | 39            | 1          |
 | 40            | 1          |
 
-<img src="./media/image7.tiff"
+<img src="./media/image7.png"
 style="width:2.53615in;height:1.72143in" />
 
 <u>C3173 – C1554</u>
 
-<img src="./media/image8.tiff"
+<img src="./media/image8.png"
 style="width:2.47287in;height:1.65714in" />
 
 | **Time(sec)** | **counts** |
@@ -243,7 +245,7 @@ style="width:2.47287in;height:1.65714in" />
 | 41            | 17         |
 | 34            | 2          |
 
-<img src="./media/image9.tiff"
+<img src="./media/image9.png"
 style="width:3.03104in;height:2.10714in" /><u>  
 </u>
 
@@ -280,7 +282,7 @@ style="width:2.90882in;height:1.43581in" />
 <img src="./media/image15.png"
 style="width:3.20134in;height:1.1872in" />
 
-<u>Conclusion</u>
+## Conclusion
 
 The results show that as the maximum periodogram reduces, the periodic
 behavior on edge also reduces accordingly. Among the top periodic edges,
