@@ -103,15 +103,18 @@ The figures below show the distribution of traffic for each end point:
 
 <b>C1340 – C787</b>
 
+
+
+<p align="center">
+﻿<img src="./media/image2.png"
+style="width:3.68145in;height:2.54425in"/>
+
 | **Time(sec)** | **counts** |
 |---------------|------------|
 | 16            | 6082       |
 | 15            | 9          |
 | 17            | 8          |
 
-<p align="center">
-﻿<img src="./media/image2.png"
-style="width:3.68145in;height:2.54425in" />
 </p>
 
 <b>C1015 – C15487</b>

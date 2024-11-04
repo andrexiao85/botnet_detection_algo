@@ -56,7 +56,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="method" class="level2">
 <h2 class="anchored" data-anchor-id="method">Method</h2>
-<p>Compute periodogram which identifies the peak of the frequency domain of the discrete time series traffic signal. After peak is located, Walker’s large sample test is applied to confirm that the peak is significant enough compared to the rest of the periodogram’s ordinates. We compute the peak and confirm with Walker’s test for different discrete time intervals. The peak of the frequency domain is obtained by computing the power spectral density of the network traffic which can be estimated using the Fourier transform of the autocorrelation function or a periodogram. The periodogram of a time sequence gives its power at different frequencies.</p>
+<p>We compute a periodogram which identifies the peak of the frequency domain of the discrete time series traffic signal. After the peak is located, Walker’s large sample test is applied to confirm that the peak is significant enough compared to the rest of the periodogram’s ordinates. We compute the peak and confirm with Walker’s test for different discrete time intervals. The peak of the frequency domain is obtained by computing the power spectral density of the network traffic which can be estimated using the Fourier transform of the autocorrelation function or a periodogram. The periodogram of a time sequence gives its power at different frequencies.</p>
 <p>We used LANL dataset to validate this algorithm. A typical day’s network traffic log looks like this:</p>
 <ul>
 <li><p>Duration 24 hours</p></li>
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>73,784 edges</p></li>
 <li><p>No.&nbsp;of events = 9 Million</p></li>
 </ul>
-<p>In order to compute the periodogram there is a need to reduce events as the computation is costly – it costs about 2 secs to compute the periodogram of one edge. We developed two segmentation techniques which work well in this regard.</p>
+<p>In order to compute the periodogram, there is a need to reduce events as the computation is costly – it costs about 2 secs to compute the periodogram of one edge. We developed two segmentation techniques which work well in this regard.</p>
 <p><strong>Segmentation 1:</strong> identify unidirectional edges</p>
 <ul>
 <li><p>Firewalls will only allow traffic going out and not coming in especially if its dubious traffic that might be coming from a malicious site or unknown site or poor reputation sites etc.</p></li>
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Combining the two segmentation strategies, leads to a set of 107 edges that we need to compute their periodogram. Computing periodogram for 107 edges takes 150 secs on a laptop.</p>
 <p><strong>Computing the Periodogram</strong></p>
 <p>We compute the maximum spectral density (periodogram) at different discrete time intervals (1s – 15s). This is mainly because different time intervals affect the maximum periodogram and there is no knowing beforehand which is the ideal time interval to consider. We suspect that durations greater than one minute are less likely to be exhibited by botnets. After computing the periodogram, it is important to select only the edges that whose periodogram meets the statistical sample size requirements in order to minimize error. Also edges with high values of the periodogram computation are more likely to exhibit botnet behavior. We selected edges that had maximum periodogram readings higher than 500. This number can be adjusted accordingly depending on how many edges one can handle.</p>
-<p>We apply walker’s large test to the periodogram’s maximum ordinate to determine if it is periodic or not.</p>
+<p>We apply Walker’s large test to the periodogram’s maximum ordinate to determine if it is periodic or not.</p>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
@@ -90,6 +90,8 @@ ul.task-list li input[type="checkbox"] {
 </p>
 <p>The figures below show the distribution of traffic for each end point:</p>
 <p><b>C1340 – C787</b></p>
+<p align="center">
+</p><p>﻿<img src="./media/image2.png" style="width:3.68145in;height:2.54425in"></p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -112,9 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p align="center">
-﻿<img src="./media/image2.png" style="width:3.68145in;height:2.54425in">
-</p>
+<p></p>
 <p><b>C1015 – C15487</b></p>
 <table class="table">
 <thead>
@@ -554,7 +554,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The results show that as the maximum periodogram reduces, the periodic behavior on edge also reduces accordingly. Among the top periodic edges, we are able to identify an edge which is a subject of lots of redteam events which is a possible candidate of botnet behavior.</p>
+<p>The results show that as the maximum periodogram reduces, the periodic behavior on edge also reduces accordingly. Among the top periodic edges, we are able to identify an edge which is a subject of many redteam events which is a possible candidate of botnet behavior.</p>
 </section>
 </section>
 
