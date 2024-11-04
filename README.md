@@ -11,7 +11,7 @@ needed for the bot to: - 1) update their data, 2) receive commands, 3)
 send keep-alive messages. The behavior is observed when looking at the
 transport port of the of the bot for its C2 communication.
 
-Research based on: 
+Work based on: [botnet_detection_academic_paper.pdf](https://github.com/andrexiao85/botnet_detection_algo/blob/main/botnet_detection_academic_paper.pdf)
 
 ## Method
 
