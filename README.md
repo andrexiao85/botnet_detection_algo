@@ -94,20 +94,13 @@ determine if it is periodic or not.
 These are end points that have maximum periodogram value \> 500 (most
 likely to be periodic) in one day.
 
-<p align="center">
 <img src="./media/image1.png"
 style="width:5.43056in;height:4.01389in" />
-</p>
+
 
 The figures below show the distribution of traffic for each end point:
 
 <b>C1340 – C787</b>
-
-
-
-<p align="center">
-﻿<img src="./media/image2.png"
-style="width:3.68145in;height:2.54425in"/>
 
 | **Time(sec)** | **counts** |
 |---------------|------------|
@@ -115,7 +108,10 @@ style="width:3.68145in;height:2.54425in"/>
 | 15            | 9          |
 | 17            | 8          |
 
-</p>
+﻿<img src="./media/image2.png"
+style="width:3.68145in;height:2.54425in"/>
+
+
 
 <b>C1015 – C15487</b>
 
@@ -125,10 +121,10 @@ style="width:3.68145in;height:2.54425in"/>
 | 31            | 42         |
 | 29            | 34         |
 
-<p align="center">
+
 <img src="./media/image3.png"
 style="wwidth:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C3871 – C23147</b>
 
@@ -138,9 +134,9 @@ style="wwidth:3.68145in;height:2.54425in" />
 | 25            | 203        |
 | 27            | 26         |
 
-<p align="center">
+
 <img src="./media/image4.png" style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C1015 – C12562</b>
 
@@ -175,10 +171,10 @@ style="wwidth:3.68145in;height:2.54425in" />
 | 7             | 13         |
 | 15            | 12         |
 
-<p align="center">
+
 <img src="./media/image5.png"
 style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C17693 – C5074</b>
 
@@ -195,10 +191,10 @@ style="width:3.68145in;height:2.54425in" />
 | 47            | 1          |
 | 54            | 1          |
 
-<p align="center">
+
 <img src="./media/image6.png"
 style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C1015 – C11114</b>
 
@@ -214,10 +210,10 @@ style="width:3.68145in;height:2.54425in" />
 | 39            | 1          |
 | 40            | 1          |
 
-<p align="center">
+
 <img src="./media/image7.png"
 style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C3173 – C1554</b>
 
@@ -244,10 +240,10 @@ style="width:3.68145in;height:2.54425in" />
 | 8             | 30         |
 | 16            | 30         |
 
-<p align="center">
+
 <img src="./media/image8.png"
 style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 <b>C1015 – C14163  
 </b>
@@ -263,10 +259,10 @@ style="width:3.68145in;height:2.54425in" />
 | 41            | 17         |
 | 34            | 2          |
 
-<p align="center">
+
 <img src="./media/image9.png"
 style="width:3.68145in;height:2.54425in" />
-</p>
+
 
 The tables below show the top daily edges based on maximum periodogram values that exhibit the most probable behavior of botnets.
 
